@@ -29,7 +29,7 @@ const (
 // StatsQuery defines query of the stats API.
 type StatsQuery struct {
 	Timeout    *int64  `query:"timeout"`
-	WritesOnly **bool  `query:"writes_only"`
+	WritesOnly *bool   `query:"writes_only"`
 	Project    *string `query:"project"`
 }
 
@@ -73,8 +73,8 @@ type StatsData struct {
 	Status                                          *string       `json:"status,omitempty"`
 	Timeout                                         *int64        `json:"timeout,omitempty"`
 	Timezone                                        *string       `json:"timezone,omitempty"`
-	TotalSeconds                                    float64       `json:"total_seconds,omitempty"`
-	TotalSecondsIncludingOtherLanguage              float64       `json:"total_seconds_including_other_language,omitempty"`
+	TotalSeconds                                    *float64      `json:"total_seconds,omitempty"`
+	TotalSecondsIncludingOtherLanguage              *float64      `json:"total_seconds_including_other_language,omitempty"`
 	UserID                                          *string       `json:"user_id,omitempty"`
 	Username                                        *string       `json:"username,omitempty"`
 	WritesOnly                                      *bool         `json:"writes_only,omitempty"`
@@ -87,18 +87,18 @@ type BestDay struct {
 	ID           *string    `json:"id,omitempty"`
 	ModifiedAt   *time.Time `json:"modified_at,omitempty"`
 	Text         *string    `json:"text,omitempty"`
-	TotalSeconds float64    `json:"total_seconds,omitempty"`
+	TotalSeconds *float64   `json:"total_seconds,omitempty"`
 }
 
 // StatItem is the item for a stat.
 type StatItem struct {
-	Digital      *string `json:"digital,omitempty"`
-	Hours        *int64  `json:"hours,omitempty"`
-	Minutes      *int64  `json:"minutes,omitempty"`
-	Name         *string `json:"name,omitempty"`
-	Percent      float64 `json:"percent,omitempty"`
-	Text         *string `json:"text,omitempty"`
-	TotalSeconds float64 `json:"total_seconds,omitempty"`
+	Digital      *string  `json:"digital,omitempty"`
+	Hours        *int64   `json:"hours,omitempty"`
+	Minutes      *int64   `json:"minutes,omitempty"`
+	Name         *string  `json:"name,omitempty"`
+	Percent      *float64 `json:"percent,omitempty"`
+	Text         *string  `json:"text,omitempty"`
+	TotalSeconds *float64 `json:"total_seconds,omitempty"`
 }
 
 // Machine is the details of machine.
@@ -118,9 +118,9 @@ type Machines struct {
 	Machine      *Machine `json:"machine,omitempty"`
 	Minutes      *int64   `json:"minutes,omitempty"`
 	Name         *string  `json:"name,omitempty"`
-	Percent      float64  `json:"percent,omitempty"`
+	Percent      *float64 `json:"percent,omitempty"`
 	Text         *string  `json:"text,omitempty"`
-	TotalSeconds float64  `json:"total_seconds,omitempty"`
+	TotalSeconds *float64 `json:"total_seconds,omitempty"`
 }
 
 // Current do the request of the durations API with current user.

@@ -55,11 +55,11 @@ func (s *service) get(ctx context.Context, endpoint string, query url.Values) ([
 	if err != nil {
 		return nil, fmt.Errorf("new request err :%w", err)
 	}
-
 	request.URL.RawQuery = query.Encode()
 
 	request.Header.Set("Content-Type", "application/json")
 	request.Header.Set("Authorization", "Basic "+base64.StdEncoding.EncodeToString([]byte(s.apikey)))
+
 	response, err := s.client.Do(request)
 	if err != nil {
 		return nil, fmt.Errorf("http client do err :%w", err)
