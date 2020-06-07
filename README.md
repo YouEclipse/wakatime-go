@@ -2,7 +2,7 @@
 [WIP] 🕘 Go library for accessing the [Wakatime](https://wakatime.com/developers#introduction) API 
 
 
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/YouEclipse/wakatime-go/pkg)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/YouEclipse/wakatime-go/pkg)![Go](https://github.com/YouEclipse/wakatime-go/workflows/Go/badge.svg)
 
 
 
@@ -25,13 +25,14 @@ import (
 )
 
 func main() {
+
 	apiKey := os.Getenv("WAKATIME_API_KEY")
-    client := wakatime.NewClient(apiKey, &http.Client{})
+	client := wakatime.NewClient(apiKey, &http.Client{})
     
 	ctx := context.Background()
 	query := &wakatime.StatsQuery{}
     
-    stats, err := client.Stats.Current(ctx, wakatime.RangeLast7Days, query)
+	stats, err := client.Stats.Current(ctx, wakatime.RangeLast7Days, query)
 	
     ...
 }
