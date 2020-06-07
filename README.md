@@ -2,7 +2,7 @@
 [WIP] 🕘 Go library for accessing the [Wakatime](https://wakatime.com/developers#introduction) API 
 
 
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/YouEclipse/wakatime-go/pkg)![Go](https://github.com/YouEclipse/wakatime-go/workflows/Go/badge.svg)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/YouEclipse/wakatime-go/pkg) ![Go](https://github.com/YouEclipse/wakatime-go/workflows/Go/badge.svg)
 
 
 
