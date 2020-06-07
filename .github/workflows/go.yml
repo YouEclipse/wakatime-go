@@ -23,4 +23,6 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Test
+      env:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
       run: go test -v ./pkg
