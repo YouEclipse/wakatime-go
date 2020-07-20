@@ -1,39 +1,39 @@
 # wakatime-go
-[WIP] 🕘 Go library for accessing the [Wakatime](https://wakatime.com/developers#introduction) API 
 
+[WIP] 🕘 Go library for accessing the [Wakatime](https://wakatime.com/developers#introduction) API
 
 [![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/YouEclipse/wakatime-go/pkg) ![Go](https://github.com/YouEclipse/wakatime-go/workflows/Go/badge.svg)
-
-
 
 ## Install
 
 #### Requirments
+
 > Go version 1.13+
 
 #### Install
+
 ```
 go get github.com/YouEclipse/wakatime-go
 ```
 
-
 ## Quick start
+
 ```golang
 
 import (
-	"github.com/YouEclipse/wakatime-go/pkg"
+	"github.com/YouEclipse/wakatime-go/pkg/wakatime"
 )
 
 func main() {
 
 	apiKey := os.Getenv("WAKATIME_API_KEY")
 	client := wakatime.NewClient(apiKey, &http.Client{})
-    
+
 	ctx := context.Background()
 	query := &wakatime.StatsQuery{}
-    
+
 	stats, err := client.Stats.Current(ctx, wakatime.RangeLast7Days, query)
-	
+
     ...
 }
 
@@ -41,11 +41,11 @@ func main() {
 
 ```
 
-
 ## Features v0.1.0
 
 #### TODOs
-- [x] [Commits](https://wakatime.com/developers#commits) 
+
+- [x] [Commits](https://wakatime.com/developers#commits)
 - [x] [Durations](https://wakatime.com/developers#durations)
 - [ ] [Heartbeats](https://wakatime.com/developers#heartbeats)
 - [ ] [Leaders](https://wakatime.com/developers#leaders)
@@ -65,6 +65,6 @@ func main() {
 
 ...
 
-
 ## License
+
 [Apache 2.0](./LICENSE)
