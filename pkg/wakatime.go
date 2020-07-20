@@ -71,8 +71,8 @@ func (s *service) get(ctx context.Context, endpoint string, query url.Values) ([
 		return nil, fmt.Errorf("read body err :%w", err)
 	}
 
-	if response.StatusCode != 200 {
-		return nil, fmt.Errorf("response code expects 200, but got %d, response body %s",
+	if !(response.StatusCode >= 200 && response.StatusCode <= 299) {
+		return nil, fmt.Errorf("response code expects 2xx, but got %d, response body %s",
 			response.StatusCode, bodyBytes)
 	}
 

@@ -8,6 +8,8 @@ import (
 
 func TestStats(t *testing.T) {
 	apiKey := os.Getenv("WAKATIME_API_KEY")
+	userID := os.Getenv("WAKATIME_USER_ID")
+
 	client := NewClient(apiKey, nil)
 	ctx := context.Background()
 	query := &StatsQuery{}
@@ -16,7 +18,7 @@ func TestStats(t *testing.T) {
 		t.Error(err)
 	}
 
-	_, err = client.Stats.User(ctx, "a5b4feda-214d-4ef2-bdc5-9a844c045006", RangeLast7Days, query)
+	_, err = client.Stats.User(ctx, userID, RangeLast7Days, query)
 	if err != nil {
 		t.Error(err)
 	}
