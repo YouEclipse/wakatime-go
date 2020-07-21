@@ -20,6 +20,7 @@ type Client struct {
 	Commits   *CommitService
 	Durations *DurationService
 	Stats     *StatService
+	Projects  *ProjectsService
 }
 
 const (
@@ -41,6 +42,7 @@ func NewClient(apikey string, httpClient *http.Client) *Client {
 	c.Durations = (*DurationService)(&c.common)
 	c.Commits = (*CommitService)(&c.common)
 	c.Stats = (*StatService)(&c.common)
+	c.Projects = (*ProjectsService)(&c.common)
 	return c
 }
 
