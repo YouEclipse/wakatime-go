@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestUserAgentss(t *testing.T) {
+func TestUserAgents(t *testing.T) {
 	apiKey := os.Getenv("WAKATIME_API_KEY")
 	userID := os.Getenv("WAKATIME_USER_ID")
 
@@ -17,6 +17,7 @@ func TestUserAgentss(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
+
 	_, err = client.UserAgents.User(ctx, userID, query1)
 	if err != nil {
 		t.Error(err)
