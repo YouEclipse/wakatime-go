@@ -17,11 +17,12 @@ import (
 type Client struct {
 	common service // Reuse a single struct instead of allocating one for each service on the heap.
 
-	Commits   *CommitService
-	Durations *DurationService
-	Stats     *StatService
-	Projects  *ProjectsService
-	Users     *UsersService
+	Commits    *CommitService
+	Durations  *DurationService
+	Stats      *StatService
+	Projects   *ProjectsService
+	Users      *UsersService
+	UserAgents *UserAgentsService
 }
 
 const (
@@ -45,6 +46,8 @@ func NewClient(apikey string, httpClient *http.Client) *Client {
 	c.Stats = (*StatService)(&c.common)
 	c.Projects = (*ProjectsService)(&c.common)
 	c.Users = (*UsersService)(&c.common)
+	c.UserAgents = (*UserAgentsService)(&c.common)
+
 	return c
 }
 
