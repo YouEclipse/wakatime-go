@@ -6,13 +6,13 @@
 
 ## Install
 
-#### Requirments
+### Requirements
 
 > Go version 1.13+
 
-#### Install
+### Installation
 
-```
+```shell
 go get github.com/YouEclipse/wakatime-go
 ```
 
@@ -21,18 +21,18 @@ go get github.com/YouEclipse/wakatime-go
 ```golang
 
 import (
-	"github.com/YouEclipse/wakatime-go/pkg/wakatime"
+  "github.com/YouEclipse/wakatime-go/pkg/wakatime"
 )
 
 func main() {
 
-	apiKey := os.Getenv("WAKATIME_API_KEY")
-	client := wakatime.NewClient(apiKey, &http.Client{})
+  apiKey := os.Getenv("WAKATIME_API_KEY")
+  client := wakatime.NewClient(apiKey, &http.Client{})
 
-	ctx := context.Background()
-	query := &wakatime.StatsQuery{}
+  ctx := context.Background()
+  query := &wakatime.StatsQuery{}
 
-	stats, err := client.Stats.Current(ctx, wakatime.RangeLast7Days, query)
+  stats, err := client.Stats.Current(ctx, wakatime.RangeLast7Days, query)
 
     ...
 }
@@ -43,7 +43,7 @@ func main() {
 
 ## Features v0.1.0
 
-#### TODOs
+### TODOs
 
 - [x] [Commits](https://wakatime.com/developers#commits)
 - [x] [Durations](https://wakatime.com/developers#durations)
