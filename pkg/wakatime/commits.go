@@ -66,43 +66,6 @@ type Commit struct {
 	URL                           *string    `json:"url,omitempty"`
 }
 
-// Project is the project of the commit.
-type Project struct {
-	CreatedAt                    *time.Time  `json:"created_at,omitempty"`
-	HasPublicURL                 *bool       `json:"has_public_url,omitempty"`
-	HTMLEscapedName              *string     `json:"html_escaped_name,omitempty"`
-	HumanReadableLastHeartbeatAt *string     `json:"human_readable_last_heartbeat_at,omitempty"`
-	ID                           *string     `json:"id,omitempty"`
-	LastHeartbeatAt              *time.Time  `json:"last_heartbeat_at,omitempty"`
-	Name                         *string     `json:"name,omitempty"`
-	Repository                   *Repository `json:"repository,omitempty"`
-	URL                          *string     `json:"url,omitempty"`
-}
-
-// Repository is the repository of the project.
-type Repository struct {
-	Badge               *string    `json:"badge,omitempty"`
-	CreatedAt           *time.Time `json:"created_at,omitempty"`
-	DefaultBranch       *string    `json:"default_branch,omitempty"`
-	Description         *string    `json:"description,omitempty"`
-	ForkCount           *int64     `json:"fork_count,omitempty"`
-	FullName            *string    `json:"full_name,omitempty"`
-	Homepage            *string    `json:"homepage,omitempty"`
-	HTMLURL             *string    `json:"html_url,omitempty"`
-	ID                  *string    `json:"id,omitempty"`
-	ImageIconURL        *string    `json:"image_icon_url,omitempty"`
-	IsFork              *bool      `json:"is_fork,omitempty"`
-	IsPrivate           *bool      `json:"is_private,omitempty"`
-	LastSyncedAt        *string    `json:"last_synced_at,omitempty"`
-	ModifiedAt          *time.Time `json:"modified_at,omitempty"`
-	Name                *string    `json:"name,omitempty"`
-	Provider            *string    `json:"provider,omitempty"`
-	StarCount           *int64     `json:"star_count,omitempty"`
-	URL                 *string    `json:"url,omitempty"`
-	WakatimeProjectName *string    `json:"wakatime_project_name,omitempty"`
-	WatchCount          *int64     `json:"watch_count,omitempty"`
-}
-
 // Current do the request of the commits API with current user.
 func (d *CommitService) Current(ctx context.Context, projectID string, query *CommitsQuery) (*CommitsResponse, error) {
 	return d.User(ctx, "current", projectID, query)
