@@ -47,6 +47,7 @@ func main() {
 
 - [x] [Commits](https://wakatime.com/developers#commits)
 - [x] [Durations](https://wakatime.com/developers#durations)
+- [x] [Goals](https://wakatime.com/developers#goals)
 - [ ] [Heartbeats](https://wakatime.com/developers#heartbeats)
 - [ ] [Leaders](https://wakatime.com/developers#leaders)
 - [ ] [Meta](https://wakatime.com/developers#meta)
