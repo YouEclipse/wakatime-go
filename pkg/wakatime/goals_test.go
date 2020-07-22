@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestGoalss(t *testing.T) {
+func TestGoals(t *testing.T) {
 	apiKey := os.Getenv("WAKATIME_API_KEY")
 	userID := os.Getenv("WAKATIME_USER_ID")
 
