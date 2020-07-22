@@ -60,7 +60,7 @@ func main() {
 - [x] [Projects](https://wakatime.com/developers#projects)
 - [x] [Stats](https://wakatime.com/developers#stats)
 - [ ] [Summaries](https://wakatime.com/developers#summaries)
-- [ ] [User Agents](https://wakatime.com/developers#user_agents)
+- [x] [User Agents](https://wakatime.com/developers#user_agents)
 - [x] [Users](https://wakatime.com/developers#users)
 
 ...
