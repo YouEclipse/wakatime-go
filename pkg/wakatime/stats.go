@@ -43,8 +43,8 @@ type StatsData struct {
 	BestDay                                         *BestDay      `json:"best_day,omitempty"`
 	Categories                                      []*StatItem   `json:"categories,omitempty"`
 	CreatedAt                                       *time.Time    `json:"created_at,omitempty"`
-	DailyAverage                                    *int64        `json:"daily_average,omitempty"`
-	DailyAverageIncludingOtherLanguage              *int64        `json:"daily_average_including_other_language,omitempty"`
+	DailyAverage                                    *float64      `json:"daily_average,omitempty"`
+	DailyAverageIncludingOtherLanguage              *float64      `json:"daily_average_including_other_language,omitempty"`
 	DaysIncludingHolidays                           *int64        `json:"days_including_holidays,omitempty"`
 	DaysMinusHolidays                               *int64        `json:"days_minus_holidays,omitempty"`
 	Dependencies                                    []interface{} `json:"dependencies,omitempty"`
